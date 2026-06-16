@@ -1,0 +1,28 @@
+name: 💬 Question, Idea, or Custom Request
+description: Anything else that doesn't fit into ship data fixes or bugs.
+title: "[Discussion]: "
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Welcome to the BridgeLink Sandbox!
+        Before posting, please double-check that your idea isn't already covered by our **Missing Ship** or **Wrong Ship** templates.
+  - type: dropdown
+    id: topic_type
+    attributes:
+      label: What is this regarding?
+      options:
+        - General Question
+        - Feature Suggestion / Idea
+        - Fleet Ops Request
+        - Other / Miscellaneous
+    validations:
+      required: true
+  - type: textarea
+    id: topic_body
+    attributes:
+      label: Your Message
+      placeholder: Type your thoughts, questions, or pitches here...
+    validations:
+      required: true
