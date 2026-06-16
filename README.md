@@ -50,3 +50,9 @@ Small, focused PRs (one ship, or a handful of related fixes) are easiest to revi
 ## Disclaimer
 
 This is an unofficial, fan-made project. It is not affiliated with or endorsed by Cloud Imperium Games or Roberts Space Industries. Ship names and manufacturers are used for identification purposes only.
+
+## Support
+
+BridgeLink is a passion project - built and maintained for the Star Citizen community, with no company, ads, or paywall behind it. If it earns a place in your fleet&rsquo;s ops and you&rsquo;d like to chip in towards keeping the servers running, it genuinely helps.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W6ESW2K)
