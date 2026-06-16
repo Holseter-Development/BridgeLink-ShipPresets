@@ -4,14 +4,14 @@ Community-maintained ship and role presets for **BridgeLink**, a structured voic
 
 > **TL;DR**
 >
-> - This repo holds `shipTemplates.json` — the stock ship/role layouts BridgeLink ships with.
+> - This repo holds `shipTemplates.json` - the stock ship/role layouts BridgeLink ships with.
 > - Found a wrong seat, missing ship, or bad role label? [Open an issue](../../issues).
 > - Want to add or fix a ship yourself? Fork, edit the JSON, [open a PR](../../pulls).
-> - Not official Star Citizen data — these are gameplay-oriented presets, not ship schematics.
+> - Not official Star Citizen data - these are gameplay-oriented presets, not ship schematics.
 
 ## What is BridgeLink?
 
-BridgeLink is a voice-operations app built for large, organized Star Citizen fleets. Instead of dumping everyone into one flat voice channel, it gives each crew member a role-based station: you can talk locally to your own cockpit or department, report up to your lead, command down to people under you, or broadcast fleet-wide if you have the authority. It's built around how fleets actually run operations — squads, ship departments, turret crews, boarding teams, capital ship command structures — not just "everyone in one Discord call."
+BridgeLink is a voice-operations app built for large, organized Star Citizen fleets. Instead of dumping everyone into one flat voice channel, it gives each crew member a role-based station: you can talk locally to your own cockpit or department, report up to your lead, command down to people under you, or broadcast fleet-wide if you have the authority. It's built around how fleets actually run operations - squads, ship departments, turret crews, boarding teams, capital ship command structures - not just "everyone in one Discord call."
 
 This repo is the public, editable home of the ship data that powers that role structure.
 
@@ -21,9 +21,9 @@ This repo is the public, editable home of the ship data that powers that role st
 
 - Its manufacturer, category, and default callsign
 - Tags used for matching it to operation types (combat, salvage, mining, escort, etc.)
-- Its crew structure — groups of seats (Cockpit, Turrets, Engineering, Boarding Party, etc.) and the role assigned to each seat
+- Its crew structure - groups of seats (Cockpit, Turrets, Engineering, Boarding Party, etc.) and the role assigned to each seat
 
-These presets are intentionally gameplay-focused rather than 1:1 with official ship loadouts. A seat layout that makes voice communication clear and playable is preferred over strict simulation accuracy. Users can also edit and create ships from scratch inside BridgeLink itself — this file is just the stock starting set.
+These presets are intentionally gameplay-focused rather than 1:1 with official ship loadouts. A seat layout that makes voice communication clear and playable is preferred over strict simulation accuracy. Users can also edit and create ships from scratch inside BridgeLink itself - this file is just the stock starting set.
 
 ## Found a mistake?
 
