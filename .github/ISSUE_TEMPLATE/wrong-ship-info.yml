@@ -1,0 +1,37 @@
+name: 🔧 Wrong Ship Information / Seat Fix
+description: Report an incorrect seat count, wrong role label, or bad matching tag.
+title: "[Fix]: "
+labels: ["bug", "data-fix"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Spot a mistake? Let's get it fixed. Provide the current broken layout and the correct layout below.
+  - type: input
+    id: ship_target
+    attributes:
+      label: Which ship has the issue?
+      placeholder: e.g., RSI Constellation Andromeda
+    validations:
+      required: true
+  - type: textarea
+    id: current_issue
+    attributes:
+      label: What is currently incorrect?
+      placeholder: e.g., The engineer seat is missing, or the top turret is labeled as a remote turret but it is manned.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_fix
+    attributes:
+      label: What should the correct layout look like?
+      placeholder: List the exact seats or labels that need to be changed.
+    validations:
+      required: true
+  - type: input
+    id: source_proof
+    attributes:
+      label: Source / Evidence (Optional)
+      placeholder: Link to an official RSI matrix, patch notes, or an in-game screenshot.
+    validations:
+      required: false

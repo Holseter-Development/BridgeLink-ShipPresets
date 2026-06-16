@@ -1,0 +1,62 @@
+name: 🚀 Missing Ship Report
+description: Request a new ship preset to be added to shipTemplates.json.
+title: "[New Ship]: "
+labels: ["enhancement", "ship-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand the BridgeLink database! Please provide the details below.
+  - type: input
+    id: ship_name
+    attributes:
+      label: Ship Name
+      placeholder: e.g., Drake Ironclad, Aegis Idris-P
+    validations:
+      required: true
+  - type: dropdown
+    id: manufacturer
+    attributes:
+      label: Manufacturer
+      options:
+        - Aegis Dynamics
+        - Anvil Aerospace
+        - Crusader Industries
+        - Drake Interplanetary
+        - MISC
+        - Origin Jumpworks
+        - RSI
+        - Other (Specify in notes)
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Ship Category / Gameplay Focus
+      options:
+        - Combat / Gunship
+        - Industrial (Mining/Salvage)
+        - Logistics / Cargo
+        - Exploration / Recon
+        - Capital Command
+    validations:
+      required: true
+  - type: textarea
+    id: crew_seats
+    attributes:
+      label: Estimated Crew & Key Seats
+      placeholder: |
+        e.g., 
+        - 1x Pilot
+        - 1x Copilot
+        - 2x Remote Turrets
+        - 4x Boarding Party
+    validations:
+      required: true
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Verification Checklist
+      options:
+        - label: I understand these presets focus on clear voice gameplay layout, not strict 1:1 simulation.
+          required: true
