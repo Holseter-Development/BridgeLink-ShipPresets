@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "notes": [
     "These are BridgeLink operational presets, not authoritative Star Citizen ship schematics.",
-    "You can edit and create new ships inside BridgeLink and save them in the cloud. This document is meant to be the stock ships found in Star Citizen along with their positions/seats",
     "Slot labels are optimized for voice-command structure and can be adjusted as ship gameplay changes.",
     "All generated role slots should start empty in Briefing Room. Users are assigned manually, by drag/drop, role request, or auto-assign.",
     "Note that the presets for ships might be wrong. I encourage you to report mistakes on GitHub: https://github.com/Holseter-Development/BridgeLink-ShipPresets"
@@ -30,8 +29,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -60,8 +60,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -90,8 +91,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -104,7 +106,12 @@
       "category": "Stealth Bomber",
       "type": "ship",
       "defaultCallsign": "Eclipse-01",
-      "operationTags": ["bomber", "stealth", "single-seat", "anti-capital"],
+      "operationTags": [
+        "bomber",
+        "stealth",
+        "single-seat",
+        "anti-capital"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -113,8 +120,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -142,8 +150,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -156,7 +165,12 @@
       "category": "Gunship",
       "type": "ship",
       "defaultCallsign": "Hammerhead-01",
-      "operationTags": ["gunship", "combat", "turrets", "multi-crew"],
+      "operationTags": [
+        "gunship",
+        "combat",
+        "turrets",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -165,8 +179,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -242,13 +257,15 @@
       ]
     },
     {
-      "id": "aegis-idris-p",
-      "name": "Aegis Idris-P",
+      "id": "aegis-idris-m",
+      "name": "Aegis Idris-M",
       "manufacturer": "Aegis Dynamics",
-      "category": "Capital Frigate",
+      "category": "Frigate",
       "type": "ship",
-      "defaultCallsign": "Idris-01",
-      "operationTags": ["capital", "combat", "fleet-command", "multi-crew"],
+      "defaultCallsign": "Idris-M-01",
+      "operationTags": [
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -257,8 +274,65 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
               "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aegis-idris-p",
+      "name": "Aegis Idris-P",
+      "manufacturer": "Aegis Dynamics",
+      "category": "Capital Frigate",
+      "type": "ship",
+      "defaultCallsign": "Idris-01",
+      "operationTags": [
+        "capital",
+        "combat",
+        "fleet-command",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "executive-officer",
@@ -408,7 +482,12 @@
       "category": "Heavy Salvage",
       "type": "ship",
       "defaultCallsign": "Reclaimer-01",
-      "operationTags": ["salvage", "industrial", "capital", "multi-crew"],
+      "operationTags": [
+        "salvage",
+        "industrial",
+        "capital",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -417,8 +496,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -534,6 +614,213 @@
       ]
     },
     {
+      "id": "aegis-redeemer",
+      "name": "Aegis Redeemer",
+      "manufacturer": "Aegis Dynamics",
+      "category": "Gunship",
+      "type": "ship",
+      "defaultCallsign": "Redeemer-01",
+      "operationTags": [
+        "combat",
+        "gunship",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            },
+            {
+              "id": "gunner-2",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aegis-retaliator",
+      "name": "Aegis Retaliator",
+      "manufacturer": "Aegis Dynamics",
+      "category": "Modular",
+      "type": "ship",
+      "defaultCallsign": "Retaliator-01",
+      "operationTags": [
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aegis-retaliator-bomber",
+      "name": "Aegis Retaliator Bomber",
+      "manufacturer": "Aegis Dynamics",
+      "category": "Modular, Bomber",
+      "type": "ship",
+      "defaultCallsign": "Retaliator-Bomber-01",
+      "operationTags": [
+        "combat",
+        "bomber",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "bombardier",
+              "label": "Bombardier",
+              "roleType": "bombardier"
+            },
+            {
+              "id": "gunner-2",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "aegis-sabre",
       "name": "Aegis Sabre",
       "manufacturer": "Aegis Dynamics",
@@ -556,8 +843,92 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aegis-sabre-firebird",
+      "name": "Aegis Sabre Firebird",
+      "manufacturer": "Aegis Dynamics",
+      "category": "Medium Fighter",
+      "type": "ship",
+      "defaultCallsign": "Sabre-Firebird-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aegis-sabre-peregrine",
+      "name": "Aegis Sabre Peregrine",
+      "manufacturer": "Aegis Dynamics",
+      "category": "Racing",
+      "type": "ship",
+      "defaultCallsign": "Sabre-Peregrine-01",
+      "operationTags": [
+        "racer",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aegis-sabre-raven",
+      "name": "Aegis Sabre Raven",
+      "manufacturer": "Aegis Dynamics",
+      "category": "Interdiction",
+      "type": "ship",
+      "defaultCallsign": "Sabre-Raven-01",
+      "operationTags": [
+        "interdiction",
+        "combat-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -570,7 +941,12 @@
       "category": "Gunship Variant",
       "type": "ship",
       "defaultCallsign": "Tiburon-01",
-      "operationTags": ["gunship", "combat", "turrets", "multi-crew"],
+      "operationTags": [
+        "gunship",
+        "combat",
+        "turrets",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -579,8 +955,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -700,8 +1077,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "bombardier",
@@ -735,8 +1113,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         },
@@ -787,8 +1166,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "ew-operator",
@@ -822,8 +1202,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -857,54 +1238,24 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
       ]
     },
     {
-      "id": "anvil-pisces-c8r",
-      "name": "Anvil C8R Pisces Rescue",
+      "id": "anvil-asgard",
+      "name": "Anvil Asgard",
       "manufacturer": "Anvil Aerospace",
-      "category": "Snub Medical",
+      "category": "Dropship",
       "type": "ship",
-      "defaultCallsign": "Pisces-R-01",
-      "operationTags": ["snub", "medical", "rescue", "parasite", "two-seat"],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            },
-            {
-              "id": "medic",
-              "label": "Medic",
-              "roleType": "medic"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "anvil-pisces-c8x",
-      "name": "Anvil C8X Pisces Expedition",
-      "manufacturer": "Anvil Aerospace",
-      "category": "Snub Multi-Role",
-      "type": "ship",
-      "defaultCallsign": "Pisces-X-01",
+      "defaultCallsign": "Asgard-01",
       "operationTags": [
-        "snub",
-        "exploration",
-        "parasite",
-        "single-seat",
-        "squadron"
+        "transport",
+        "two-seat"
       ],
       "groups": [
         {
@@ -914,8 +1265,31 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "assault-team",
+          "name": "Assault Team",
+          "slots": [
+            {
+              "id": "team-lead",
+              "label": "Team Lead",
+              "roleType": "squadLead",
               "isLead": true
+            },
+            {
+              "id": "crew-1",
+              "label": "Crew",
+              "roleType": "trooper"
             }
           ]
         }
@@ -942,8 +1316,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -1027,6 +1402,34 @@
       ]
     },
     {
+      "id": "anvil-f7a-hornet-mk1",
+      "name": "Anvil F7A Hornet Mk1",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Medium Fighter",
+      "type": "ship",
+      "defaultCallsign": "Hornet-Mk1-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "anvil-f7a-hornet-mk2",
       "name": "Anvil F7A Hornet Mk II",
       "manufacturer": "Anvil Aerospace",
@@ -1049,26 +1452,25 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
       ]
     },
     {
-      "id": "anvil-hornet-f7c",
-      "name": "Anvil F7C Hornet",
+      "id": "anvil-f7c-hornet-mk1",
+      "name": "Anvil F7C Hornet Mk1",
       "manufacturer": "Anvil Aerospace",
       "category": "Medium Fighter",
       "type": "ship",
-      "defaultCallsign": "Hornet-01",
+      "defaultCallsign": "Hornet-Mk1-01",
       "operationTags": [
         "fighter",
-        "medium",
         "combat",
-        "single-seat",
-        "squadron"
+        "single-seat"
       ],
       "groups": [
         {
@@ -1078,8 +1480,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1107,21 +1510,26 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
       ]
     },
     {
-      "id": "anvil-super-hornet",
-      "name": "Anvil F7C-M Super Hornet",
+      "id": "anvil-f7c-m-super-hornet-mk1",
+      "name": "Anvil F7C-M Super Hornet Mk1",
       "manufacturer": "Anvil Aerospace",
       "category": "Medium Fighter",
       "type": "ship",
-      "defaultCallsign": "SuperHornet-01",
-      "operationTags": ["fighter", "medium", "combat", "two-seat", "squadron"],
+      "defaultCallsign": "Hornet-Mk1-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "two-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -1130,12 +1538,24 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
-              "id": "turret-gunner",
-              "label": "Turret Gunner",
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "gunner",
+              "label": "Gunner",
               "roleType": "gunner"
             }
           ]
@@ -1143,20 +1563,16 @@
       ]
     },
     {
-      "id": "anvil-f7c-r-hornet-tracker",
-      "name": "Anvil F7C-R Hornet Tracker",
+      "id": "anvil-f7c-m-super-hornet-mk2",
+      "name": "Anvil F7C-M Super Hornet Mk2",
       "manufacturer": "Anvil Aerospace",
-      "category": "AWACS Fighter",
+      "category": "Medium Fighter",
       "type": "ship",
-      "defaultCallsign": "Tracker-01",
+      "defaultCallsign": "Hornet-Mk2-01",
       "operationTags": [
         "fighter",
-        "awacs",
-        "recon",
-        "combat-support",
-        "two-seat",
-        "squadron",
-        "escort"
+        "combat",
+        "two-seat"
       ],
       "groups": [
         {
@@ -1166,32 +1582,40 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
-              "id": "operator",
-              "label": "Sensor Operator",
-              "roleType": "sensorOperator"
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
             }
           ]
         }
       ]
     },
     {
-      "id": "anvil-f7c-s-hornet-ghost",
-      "name": "Anvil F7C-S Hornet Ghost",
+      "id": "anvil-f7c-r-hornet-tracker-mk1",
+      "name": "Anvil F7C-R Hornet Tracker Mk1",
       "manufacturer": "Anvil Aerospace",
-      "category": "Stealth Fighter",
+      "category": "Pathfinder",
       "type": "ship",
-      "defaultCallsign": "Ghost-01",
+      "defaultCallsign": "Tracker-Mk1-01",
       "operationTags": [
-        "fighter",
-        "stealth",
-        "recon",
-        "combat",
-        "single-seat",
-        "squadron"
+        "exploration",
+        "single-seat"
       ],
       "groups": [
         {
@@ -1201,8 +1625,122 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-f7c-r-hornet-tracker-mk2",
+      "name": "Anvil F7C-R Hornet Tracker Mk2",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Pathfinder",
+      "type": "ship",
+      "defaultCallsign": "Tracker-Mk2-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-f7c-s-hornet-ghost-mk1",
+      "name": "Anvil F7C-S Hornet Ghost Mk1",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Stealth Fighter",
+      "type": "ship",
+      "defaultCallsign": "Ghost-Mk1-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "stealth",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-f7c-s-hornet-ghost-mk2",
+      "name": "Anvil F7C-S Hornet Ghost Mk2",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Stealth Fighter",
+      "type": "ship",
+      "defaultCallsign": "Ghost-Mk2-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "stealth",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-f8a-lightning",
+      "name": "Anvil F8A Lightning",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Heavy Fighter",
+      "type": "ship",
+      "defaultCallsign": "F8A-Lightning-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1230,8 +1768,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1259,8 +1798,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "bombardier",
@@ -1294,8 +1834,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1308,39 +1849,11 @@
       "category": "Heavy Fighter",
       "type": "ship",
       "defaultCallsign": "Hurricane-01",
-      "operationTags": ["fighter", "heavy", "combat", "two-seat", "escort"],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            },
-            {
-              "id": "turret-gunner",
-              "label": "Turret Gunner",
-              "roleType": "gunner"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "anvil-legionnaire",
-      "name": "Anvil Legionnaire",
-      "manufacturer": "Anvil Aerospace",
-      "category": "Boarding Ship",
-      "type": "ship",
-      "defaultCallsign": "Legionnaire-01",
       "operationTags": [
-        "boarding",
-        "assault",
+        "fighter",
+        "heavy",
         "combat",
-        "multi-crew",
+        "two-seat",
         "escort"
       ],
       "groups": [
@@ -1351,35 +1864,14 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
-              "id": "co-pilot",
-              "label": "Co-Pilot / Turret",
-              "roleType": "coPilot"
-            }
-          ]
-        },
-        {
-          "id": "boarding-party",
-          "name": "Boarding Party",
-          "slots": [
-            {
-              "id": "breacher",
-              "label": "Breacher",
-              "roleType": "breacher",
-              "isLead": true
-            },
-            {
-              "id": "marine-1",
-              "label": "Marine",
-              "roleType": "marine"
-            },
-            {
-              "id": "marine-2",
-              "label": "Marine",
-              "roleType": "marine"
+              "id": "turret-gunner",
+              "label": "Turret Gunner",
+              "roleType": "gunner"
             }
           ]
         }
@@ -1392,7 +1884,12 @@
       "category": "Light Gunship",
       "type": "ship",
       "defaultCallsign": "Paladin-01",
-      "operationTags": ["gunship", "combat", "multi-crew", "escort"],
+      "operationTags": [
+        "gunship",
+        "combat",
+        "multi-crew",
+        "escort"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -1401,8 +1898,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -1430,18 +1928,72 @@
       ]
     },
     {
-      "id": "anvil-spartan",
-      "name": "Anvil Spartan",
+      "id": "anvil-pisces-c8",
+      "name": "Anvil Pisces C8",
       "manufacturer": "Anvil Aerospace",
-      "category": "Light APC",
+      "category": "Pathfinder",
       "type": "ship",
-      "defaultCallsign": "Spartan-01",
+      "defaultCallsign": "Pisces-C8-01",
       "operationTags": [
-        "transport",
-        "ground-support",
-        "apc",
-        "boarding",
+        "exploration",
         "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-pisces-c8r",
+      "name": "Anvil C8R Pisces Rescue",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Snub Medical",
+      "type": "ship",
+      "defaultCallsign": "Pisces-R-01",
+      "operationTags": [
+        "snub",
+        "medical",
+        "rescue",
+        "parasite",
+        "two-seat"
       ],
       "groups": [
         {
@@ -1451,30 +2003,44 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "medic",
+              "label": "Medic",
+              "roleType": "medic"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "anvil-pisces-c8x",
+      "name": "Anvil C8X Pisces Expedition",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Snub Multi-Role",
+      "type": "ship",
+      "defaultCallsign": "Pisces-X-01",
+      "operationTags": [
+        "snub",
+        "exploration",
+        "parasite",
+        "single-seat",
+        "squadron"
+      ],
+      "groups": [
         {
-          "id": "troops",
-          "name": "Troop Bay",
+          "id": "cockpit",
+          "name": "Cockpit",
           "slots": [
             {
-              "id": "squad-lead",
-              "label": "Squad Lead",
-              "roleType": "squadLead",
-              "isLead": true
-            },
-            {
-              "id": "trooper-1",
-              "label": "Trooper",
-              "roleType": "trooper"
-            },
-            {
-              "id": "trooper-2",
-              "label": "Trooper",
-              "roleType": "trooper"
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1502,13 +2068,59 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "sensor-operator",
               "label": "Sensor Operator",
               "roleType": "sensorOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-terrapin-medic",
+      "name": "Anvil Terrapin Medic",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Medical",
+      "type": "ship",
+      "defaultCallsign": "Terrapin-Medic-01",
+      "operationTags": [
+        "medical",
+        "rescue",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "medical",
+          "name": "Medical",
+          "slots": [
+            {
+              "id": "medical-officer",
+              "label": "Medical Officer",
+              "roleType": "medic",
+              "isLead": true
             }
           ]
         }
@@ -1521,7 +2133,12 @@
       "category": "Dropship",
       "type": "ship",
       "defaultCallsign": "Valkyrie-01",
-      "operationTags": ["dropship", "ground-support", "assault", "multi-crew"],
+      "operationTags": [
+        "dropship",
+        "ground-support",
+        "assault",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -1530,8 +2147,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -1597,19 +2215,16 @@
       ]
     },
     {
-      "id": "aopoa-khartu-al",
-      "name": "Aopoa Khartu-al",
-      "manufacturer": "Aopoa",
-      "category": "Light Fighter",
+      "id": "argo-mole",
+      "name": "ARGO MOLE",
+      "manufacturer": "ARGO Astronautics",
+      "category": "Mining",
       "type": "ship",
-      "defaultCallsign": "Khartu-al-01",
+      "defaultCallsign": "MOLE-01",
       "operationTags": [
-        "fighter",
-        "light",
-        "scout",
-        "alien",
-        "single-seat",
-        "squadron"
+        "mining",
+        "industrial",
+        "multi-crew"
       ],
       "groups": [
         {
@@ -1619,54 +2234,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "aopoa-nox",
-      "name": "Aopoa Nox",
-      "manufacturer": "Aopoa",
-      "category": "Snub Bike",
-      "type": "ship",
-      "defaultCallsign": "Nox-01",
-      "operationTags": ["snub", "bike", "alien", "parasite", "single-seat"],
-      "groups": [
-        {
-          "id": "bike",
-          "name": "Bike",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "argo-mole",
-      "name": "ARGO MOLE",
-      "manufacturer": "ARGO Astronautics",
-      "category": "Mining",
-      "type": "ship",
-      "defaultCallsign": "MOLE-01",
-      "operationTags": ["mining", "industrial", "multi-crew"],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -1728,7 +2298,11 @@
       "category": "Medium Salvage",
       "type": "ship",
       "defaultCallsign": "MOTH-01",
-      "operationTags": ["salvage", "industrial", "multi-crew"],
+      "operationTags": [
+        "salvage",
+        "industrial",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -1737,8 +2311,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -1811,13 +2386,17 @@
       ]
     },
     {
-      "id": "argo-mpuv-cargo",
-      "name": "ARGO MPUV Cargo",
+      "id": "argo-mpuv-1c-cargo",
+      "name": "ARGO MPUV-1C Cargo",
       "manufacturer": "ARGO Astronautics",
-      "category": "Snub Cargo",
+      "category": "Light Freight",
       "type": "ship",
-      "defaultCallsign": "MPUV-C-01",
-      "operationTags": ["snub", "cargo", "parasite", "single-seat"],
+      "defaultCallsign": "1C-Cargo-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -1826,21 +2405,25 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
       ]
     },
     {
-      "id": "argo-mpuv-personnel",
-      "name": "ARGO MPUV Personnel",
+      "id": "argo-mpuv-1p-personnel",
+      "name": "ARGO MPUV-1P Personnel",
       "manufacturer": "ARGO Astronautics",
-      "category": "Snub Transport",
+      "category": "Passenger",
       "type": "ship",
-      "defaultCallsign": "MPUV-P-01",
-      "operationTags": ["snub", "transport", "parasite", "single-seat"],
+      "defaultCallsign": "1P-Personnel-01",
+      "operationTags": [
+        "transport",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -1849,8 +2432,37 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "argo-mpuv-1t-tractor",
+      "name": "ARGO MPUV-1T Tractor",
+      "manufacturer": "ARGO Astronautics",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "1T-Tractor-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1863,7 +2475,12 @@
       "category": "Cargo",
       "type": "ship",
       "defaultCallsign": "RAFT-01",
-      "operationTags": ["cargo", "hauler", "industrial", "single-seat"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "industrial",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -1872,8 +2489,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1901,8 +2519,108 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banu-defender",
+      "name": "Banu Defender",
+      "manufacturer": "Banu",
+      "category": "Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "Defender-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnou-mustang-alpha",
+      "name": "Consolidated Outland Mustang Alpha",
+      "manufacturer": "Consolidated Outland",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "Mustang-Alpha-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnou-mustang-beta",
+      "name": "Consolidated Outland Mustang Beta",
+      "manufacturer": "Consolidated Outland",
+      "category": "Pathfinder",
+      "type": "ship",
+      "defaultCallsign": "Mustang-Beta-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1930,8 +2648,91 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnou-mustang-gamma",
+      "name": "Consolidated Outland Mustang Gamma",
+      "manufacturer": "Consolidated Outland",
+      "category": "Racing",
+      "type": "ship",
+      "defaultCallsign": "Mustang-Gamma-01",
+      "operationTags": [
+        "racer",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnou-mustang-omega",
+      "name": "Consolidated Outland Mustang Omega",
+      "manufacturer": "Consolidated Outland",
+      "category": "Racing",
+      "type": "ship",
+      "defaultCallsign": "Mustang-Omega-01",
+      "operationTags": [
+        "racer",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnou-nomad",
+      "name": "Consolidated Outland Nomad",
+      "manufacturer": "Consolidated Outland",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "Nomad-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1959,8 +2760,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -1988,8 +2790,86 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crusader-hercules-a2",
+      "name": "Crusader Hercules A2",
+      "manufacturer": "Crusader Industries",
+      "category": "Heavy Bomber",
+      "type": "ship",
+      "defaultCallsign": "Hercules-A2-01",
+      "operationTags": [
+        "combat",
+        "bomber",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
               "isLead": true
+            },
+            {
+              "id": "bombardier",
+              "label": "Bombardier",
+              "roleType": "bombardier"
+            },
+            {
+              "id": "gunner-2",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
             }
           ]
         }
@@ -2002,7 +2882,12 @@
       "category": "Heavy Cargo Transport",
       "type": "ship",
       "defaultCallsign": "Hercules-C2-01",
-      "operationTags": ["cargo", "hauler", "vehicle-transport", "multi-crew"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "vehicle-transport",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -2011,8 +2896,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -2124,8 +3010,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -2221,6 +3108,106 @@
       ]
     },
     {
+      "id": "crusader-intrepid",
+      "name": "Crusader Intrepid",
+      "manufacturer": "Crusader Industries",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "Intrepid-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crusader-mercury-star-runner",
+      "name": "Crusader Mercury Star Runner",
+      "manufacturer": "Crusader Industries",
+      "category": "Medium Freight, Data",
+      "type": "ship",
+      "defaultCallsign": "Mercury-Star-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "cargo",
+          "name": "Cargo",
+          "slots": [
+            {
+              "id": "loadmaster",
+              "label": "Loadmaster",
+              "roleType": "loadmaster",
+              "isLead": true
+            },
+            {
+              "id": "cargo-handler",
+              "label": "Cargo Handler",
+              "roleType": "cargoHandler"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "crusader-spirit-a1",
       "name": "Crusader Spirit A1",
       "manufacturer": "Crusader Industries",
@@ -2242,8 +3229,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "bombardier",
@@ -2277,40 +3265,13 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
               "label": "Co-Pilot / Turret",
-              "roleType": "coPilot"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "crusader-spirit-e1",
-      "name": "Crusader Spirit E1",
-      "manufacturer": "Crusader Industries",
-      "category": "Light Multi-Role",
-      "type": "ship",
-      "defaultCallsign": "Spirit-E1-01",
-      "operationTags": ["multi-role", "light", "exploration", "two-seat"],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            },
-            {
-              "id": "co-pilot",
-              "label": "Co-Pilot",
               "roleType": "coPilot"
             }
           ]
@@ -2339,8 +3300,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -2353,7 +3315,12 @@
       "category": "Heavy Freight",
       "type": "ship",
       "defaultCallsign": "Caterpillar-01",
-      "operationTags": ["cargo", "hauler", "modular", "multi-crew"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "modular",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -2362,8 +3329,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -2442,6 +3410,81 @@
       ]
     },
     {
+      "id": "drake-clipper",
+      "name": "Drake Clipper",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Generalist",
+      "type": "ship",
+      "defaultCallsign": "Clipper-01",
+      "operationTags": [
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drake-command-module",
+      "name": "Drake Command Module",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Light Passenger",
+      "type": "ship",
+      "defaultCallsign": "Command-Module-01",
+      "operationTags": [
+        "transport",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "passengers",
+          "name": "Passenger / Team",
+          "slots": [
+            {
+              "id": "team-lead",
+              "label": "Team Lead",
+              "roleType": "squadLead",
+              "isLead": true
+            },
+            {
+              "id": "crew-1",
+              "label": "Crew",
+              "roleType": "trooper"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "drake-corsair",
       "name": "Drake Corsair",
       "manufacturer": "Drake Interplanetary",
@@ -2464,8 +3507,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -2515,8 +3559,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -2549,8 +3594,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -2585,7 +3631,13 @@
       "category": "Medical",
       "type": "ship",
       "defaultCallsign": "Cutlass-Red-01",
-      "operationTags": ["medical", "rescue", "support", "two-seat", "escort"],
+      "operationTags": [
+        "medical",
+        "rescue",
+        "support",
+        "two-seat",
+        "escort"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -2594,8 +3646,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -2645,8 +3698,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -2680,28 +3734,86 @@
       ]
     },
     {
-      "id": "drake-dragonfly",
-      "name": "Drake Dragonfly",
+      "id": "drake-cutter",
+      "name": "Drake Cutter",
       "manufacturer": "Drake Interplanetary",
-      "category": "Snub Bike",
+      "category": "Pathfinder",
       "type": "ship",
-      "defaultCallsign": "Dragonfly-01",
-      "operationTags": ["snub", "bike", "parasite", "two-seat"],
+      "defaultCallsign": "Cutter-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
       "groups": [
         {
-          "id": "bike",
-          "name": "Bike",
+          "id": "cockpit",
+          "name": "Cockpit",
           "slots": [
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drake-cutter-rambler",
+      "name": "Drake Cutter Rambler",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Expedition",
+      "type": "ship",
+      "defaultCallsign": "Cutter-Rambler-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
-              "id": "passenger",
-              "label": "Passenger / Gunner",
-              "roleType": "gunner"
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drake-cutter-scout",
+      "name": "Drake Cutter Scout",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Pathfinder",
+      "type": "ship",
+      "defaultCallsign": "Cutter-Scout-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -2714,7 +3826,11 @@
       "category": "Starter Mining",
       "type": "ship",
       "defaultCallsign": "Golem-01",
-      "operationTags": ["mining", "industrial", "single-seat"],
+      "operationTags": [
+        "mining",
+        "industrial",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -2723,8 +3839,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         },
@@ -2737,6 +3854,60 @@
               "label": "Mining Operator",
               "roleType": "miningOperator",
               "isLead": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drake-golem-ox",
+      "name": "Drake Golem OX",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "Golem-OX-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drake-herald",
+      "name": "Drake Herald",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Medium Data",
+      "type": "ship",
+      "defaultCallsign": "Herald-01",
+      "operationTags": [
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -2764,8 +3935,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -2898,8 +4070,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -2984,13 +4157,19 @@
       ]
     },
     {
-      "id": "drake-mule",
-      "name": "Drake Mule",
+      "id": "drake-pitbull",
+      "name": "Drake Pitbull",
       "manufacturer": "Drake Interplanetary",
-      "category": "Snub Utility",
+      "category": "Snub Fighter",
       "type": "ship",
-      "defaultCallsign": "Mule-01",
-      "operationTags": ["snub", "cargo", "utility", "parasite", "single-seat"],
+      "defaultCallsign": "Pitbull-01",
+      "operationTags": [
+        "snub",
+        "combat",
+        "parasite",
+        "single-seat",
+        "squadron"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -2999,8 +4178,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3013,7 +4193,11 @@
       "category": "Salvage",
       "type": "ship",
       "defaultCallsign": "Vulture-01",
-      "operationTags": ["salvage", "industrial", "single-seat"],
+      "operationTags": [
+        "salvage",
+        "industrial",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3022,8 +4206,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3051,8 +4236,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3080,8 +4266,186 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esperia-prowler",
+      "name": "Esperia Prowler",
+      "manufacturer": "Esperia Inc.",
+      "category": "Dropship",
+      "type": "ship",
+      "defaultCallsign": "Prowler-01",
+      "operationTags": [
+        "transport",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "assault-team",
+          "name": "Assault Team",
+          "slots": [
+            {
+              "id": "team-lead",
+              "label": "Team Lead",
+              "roleType": "squadLead",
               "isLead": true
+            },
+            {
+              "id": "crew-1",
+              "label": "Crew",
+              "roleType": "trooper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esperia-prowler-utility",
+      "name": "Esperia Prowler Utility",
+      "manufacturer": "Esperia Inc.",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "Prowler-Utility-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "cargo",
+          "name": "Cargo",
+          "slots": [
+            {
+              "id": "loadmaster",
+              "label": "Loadmaster",
+              "roleType": "loadmaster",
+              "isLead": true
+            },
+            {
+              "id": "cargo-handler",
+              "label": "Cargo Handler",
+              "roleType": "cargoHandler"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esperia-scythe",
+      "name": "Esperia Scythe",
+      "manufacturer": "Esperia Inc.",
+      "category": "Medium Fighter",
+      "type": "ship",
+      "defaultCallsign": "Scythe-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esperia-stinger",
+      "name": "Esperia Stinger",
+      "manufacturer": "Esperia Inc.",
+      "category": "Heavy Fighter",
+      "type": "ship",
+      "defaultCallsign": "Stinger-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3109,8 +4473,109 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esperia-talon-shrike",
+      "name": "Esperia Talon Shrike",
+      "manufacturer": "Esperia Inc.",
+      "category": "Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "Talon-Shrike-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gatac-railen",
+      "name": "Gatac Railen",
+      "manufacturer": "Gatac Manufacture",
+      "category": "Heavy Freight",
+      "type": "ship",
+      "defaultCallsign": "Railen-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "cargo",
+          "name": "Cargo",
+          "slots": [
+            {
+              "id": "loadmaster",
+              "label": "Loadmaster",
+              "roleType": "loadmaster",
               "isLead": true
+            },
+            {
+              "id": "cargo-handler",
+              "label": "Cargo Handler",
+              "roleType": "cargoHandler"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
             }
           ]
         }
@@ -3123,7 +4588,12 @@
       "category": "Light Multi-Role",
       "type": "ship",
       "defaultCallsign": "Syulen-01",
-      "operationTags": ["multi-role", "light", "alien", "single-seat"],
+      "operationTags": [
+        "multi-role",
+        "light",
+        "alien",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3132,8 +4602,162 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gatac-tyilui",
+      "name": "Gatac Tyilui",
+      "manufacturer": "Gatac Manufacture",
+      "category": "Carrier",
+      "type": "ship",
+      "defaultCallsign": "Tyilui-01",
+      "operationTags": [
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
               "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grey-s-market-shiv",
+      "name": "Grey's Market Shiv",
+      "manufacturer": "Grey's Market",
+      "category": "Heavy Fighter",
+      "type": "ship",
+      "defaultCallsign": "Shiv-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kruger-l-21-wolf",
+      "name": "Kruger L-21 Wolf",
+      "manufacturer": "Kruger Intergalactic",
+      "category": "Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "L-21-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kruger-l-22-alpha-wolf",
+      "name": "Kruger L-22 Alpha Wolf",
+      "manufacturer": "Kruger Intergalactic",
+      "category": "Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "L-22-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3161,8 +4785,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3190,119 +4815,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mirai-fury",
-      "name": "Mirai Fury",
-      "manufacturer": "Mirai",
-      "category": "Snub Fighter",
-      "type": "ship",
-      "defaultCallsign": "Fury-01",
-      "operationTags": [
-        "snub",
-        "fighter",
-        "parasite",
-        "single-seat",
-        "squadron"
-      ],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mirai-fury-lx",
-      "name": "Mirai Fury LX",
-      "manufacturer": "Mirai",
-      "category": "Snub Racer",
-      "type": "ship",
-      "defaultCallsign": "Fury-LX-01",
-      "operationTags": ["snub", "racer", "parasite", "single-seat"],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mirai-guardian",
-      "name": "Mirai Guardian",
-      "manufacturer": "Mirai",
-      "category": "Medium Fighter",
-      "type": "ship",
-      "defaultCallsign": "Guardian-01",
-      "operationTags": [
-        "fighter",
-        "medium",
-        "combat",
-        "single-seat",
-        "squadron"
-      ],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mirai-guardian-qi",
-      "name": "Mirai Guardian QI",
-      "manufacturer": "Mirai",
-      "category": "Interdictor Fighter",
-      "type": "ship",
-      "defaultCallsign": "Guardian-QI-01",
-      "operationTags": [
-        "fighter",
-        "medium",
-        "interdictor",
-        "ew",
-        "single-seat",
-        "escort"
-      ],
-      "groups": [
-        {
-          "id": "cockpit",
-          "name": "Cockpit",
-          "slots": [
-            {
-              "id": "pilot",
-              "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3315,7 +4830,11 @@
       "category": "Light Salvage",
       "type": "ship",
       "defaultCallsign": "Fortune-01",
-      "operationTags": ["salvage", "industrial", "single-seat"],
+      "operationTags": [
+        "salvage",
+        "industrial",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3324,8 +4843,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         },
@@ -3362,7 +4882,12 @@
       "category": "Medium Freight",
       "type": "ship",
       "defaultCallsign": "Freelancer-01",
-      "operationTags": ["cargo", "hauler", "multi-role", "multi-crew"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "multi-role",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3371,8 +4896,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -3412,6 +4938,77 @@
               "id": "turret-1",
               "label": "Turret 1",
               "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misc-freelancer-dur",
+      "name": "MISC Freelancer DUR",
+      "manufacturer": "MISC",
+      "category": "Expedition",
+      "type": "ship",
+      "defaultCallsign": "Freelancer-DUR-01",
+      "operationTags": [
+        "exploration",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
             }
           ]
         }
@@ -3424,7 +5021,11 @@
       "category": "Medium Freight",
       "type": "ship",
       "defaultCallsign": "Freelancer-MAX-01",
-      "operationTags": ["cargo", "hauler", "multi-crew"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3433,8 +5034,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -3480,13 +5082,95 @@
       ]
     },
     {
+      "id": "misc-freelancer-mis",
+      "name": "MISC Freelancer Mis",
+      "manufacturer": "MISC",
+      "category": "Gunship",
+      "type": "ship",
+      "defaultCallsign": "Freelancer-Mis-01",
+      "operationTags": [
+        "combat",
+        "gunship",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            },
+            {
+              "id": "gunner-2",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "misc-hull-a",
       "name": "MISC Hull A",
       "manufacturer": "MISC",
       "category": "Light Freight",
       "type": "ship",
       "defaultCallsign": "Hull-A-01",
-      "operationTags": ["cargo", "hauler", "industrial", "single-seat"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "industrial",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3495,8 +5179,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         },
@@ -3521,7 +5206,12 @@
       "category": "Medium Freight",
       "type": "ship",
       "defaultCallsign": "Hull-B-01",
-      "operationTags": ["cargo", "hauler", "industrial", "two-seat"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "industrial",
+        "two-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3530,8 +5220,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -3566,7 +5257,12 @@
       "category": "Heavy Freight",
       "type": "ship",
       "defaultCallsign": "Hull-C-01",
-      "operationTags": ["cargo", "hauler", "industrial", "multi-crew"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "industrial",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -3575,8 +5271,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -3656,7 +5353,11 @@
       "category": "Mining",
       "type": "ship",
       "defaultCallsign": "Prospector-01",
-      "operationTags": ["mining", "industrial", "single-seat"],
+      "operationTags": [
+        "mining",
+        "industrial",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -3665,8 +5366,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3695,8 +5397,211 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misc-razor-ex",
+      "name": "MISC Razor EX",
+      "manufacturer": "MISC",
+      "category": "Stealth Fighter",
+      "type": "ship",
+      "defaultCallsign": "Razor-EX-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "stealth",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misc-razor-lx",
+      "name": "MISC Razor LX",
+      "manufacturer": "MISC",
+      "category": "Racing",
+      "type": "ship",
+      "defaultCallsign": "Razor-LX-01",
+      "operationTags": [
+        "racer",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misc-reliant-kore",
+      "name": "MISC Reliant Kore",
+      "manufacturer": "MISC",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "Reliant-Kore-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "cargo",
+          "name": "Cargo",
+          "slots": [
+            {
+              "id": "loadmaster",
+              "label": "Loadmaster",
+              "roleType": "loadmaster",
               "isLead": true
+            },
+            {
+              "id": "cargo-handler",
+              "label": "Cargo Handler",
+              "roleType": "cargoHandler"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misc-reliant-mako",
+      "name": "MISC Reliant Mako",
+      "manufacturer": "MISC",
+      "category": "Reporting",
+      "type": "ship",
+      "defaultCallsign": "Reliant-Mako-01",
+      "operationTags": [
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misc-reliant-sen",
+      "name": "MISC Reliant Sen",
+      "manufacturer": "MISC",
+      "category": "Light Science",
+      "type": "ship",
+      "defaultCallsign": "Reliant-Sen-01",
+      "operationTags": [
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
             }
           ]
         }
@@ -3724,8 +5629,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -3753,8 +5659,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -3866,8 +5773,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -3958,7 +5866,12 @@
       "category": "Heavy Freight",
       "type": "ship",
       "defaultCallsign": "Starlancer-MAX-01",
-      "operationTags": ["cargo", "hauler", "vehicle-transport", "multi-crew"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "vehicle-transport",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -3967,8 +5880,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -4064,13 +5978,135 @@
       ]
     },
     {
-      "id": "origin-325a",
-      "name": "Origin 325a",
-      "manufacturer": "Origin Jumpworks",
-      "category": "Light Fighter",
+      "id": "misc-starlancer-tac",
+      "name": "MISC Starlancer TAC",
+      "manufacturer": "MISC",
+      "category": "Gunship",
       "type": "ship",
-      "defaultCallsign": "325a-01",
-      "operationTags": ["fighter", "light", "single-seat", "squadron"],
+      "defaultCallsign": "Starlancer-TAC-01",
+      "operationTags": [
+        "combat",
+        "gunship",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            },
+            {
+              "id": "gunner-2",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misc-starlite",
+      "name": "MISC Starlite",
+      "manufacturer": "MISC",
+      "category": "Light Refuel",
+      "type": "ship",
+      "defaultCallsign": "Starlite-01",
+      "operationTags": [
+        "industrial",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        },
+        {
+          "id": "industrial-ops",
+          "name": "Industrial Ops",
+          "slots": [
+            {
+              "id": "industrial-lead",
+              "label": "Industrial Lead",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-fury",
+      "name": "Mirai Fury",
+      "manufacturer": "Mirai",
+      "category": "Snub Fighter",
+      "type": "ship",
+      "defaultCallsign": "Fury-01",
+      "operationTags": [
+        "snub",
+        "fighter",
+        "parasite",
+        "single-seat",
+        "squadron"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -4079,8 +6115,616 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-fury-lx",
+      "name": "Mirai Fury LX",
+      "manufacturer": "Mirai",
+      "category": "Snub Racer",
+      "type": "ship",
+      "defaultCallsign": "Fury-LX-01",
+      "operationTags": [
+        "snub",
+        "racer",
+        "parasite",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-fury-mx",
+      "name": "Mirai Fury MX",
+      "manufacturer": "Mirai",
+      "category": "Snub Bomber",
+      "type": "ship",
+      "defaultCallsign": "Fury-MX-01",
+      "operationTags": [
+        "combat",
+        "bomber",
+        "snub",
+        "parasite",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-guardian",
+      "name": "Mirai Guardian",
+      "manufacturer": "Mirai",
+      "category": "Medium Fighter",
+      "type": "ship",
+      "defaultCallsign": "Guardian-01",
+      "operationTags": [
+        "fighter",
+        "medium",
+        "combat",
+        "single-seat",
+        "squadron"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-guardian-mx",
+      "name": "Mirai Guardian MX",
+      "manufacturer": "Mirai",
+      "category": "Heavy Fighter",
+      "type": "ship",
+      "defaultCallsign": "Guardian-MX-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-guardian-qi",
+      "name": "Mirai Guardian QI",
+      "manufacturer": "Mirai",
+      "category": "Interdictor Fighter",
+      "type": "ship",
+      "defaultCallsign": "Guardian-QI-01",
+      "operationTags": [
+        "fighter",
+        "medium",
+        "interdictor",
+        "ew",
+        "single-seat",
+        "escort"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-100i",
+      "name": "Origin 100i",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Pathfinder",
+      "type": "ship",
+      "defaultCallsign": "100i-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-125a",
+      "name": "Origin 125a",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "125a-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-135c",
+      "name": "Origin 135c",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "135c-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-300i",
+      "name": "Origin 300i",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Luxury Touring",
+      "type": "ship",
+      "defaultCallsign": "300i-01",
+      "operationTags": [
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-315p",
+      "name": "Origin 315p",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Pathfinder",
+      "type": "ship",
+      "defaultCallsign": "315p-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-325a",
+      "name": "Origin 325a",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "325a-01",
+      "operationTags": [
+        "fighter",
+        "light",
+        "single-seat",
+        "squadron"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-350r",
+      "name": "Origin 350r",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Racing",
+      "type": "ship",
+      "defaultCallsign": "350r-01",
+      "operationTags": [
+        "racer",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-400i",
+      "name": "Origin 400i",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Expedition",
+      "type": "ship",
+      "defaultCallsign": "400i-01",
+      "operationTags": [
+        "exploration",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
               "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-600i-explorer",
+      "name": "Origin 600i Explorer",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Expedition",
+      "type": "ship",
+      "defaultCallsign": "600i-Explorer-01",
+      "operationTags": [
+        "exploration",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-600i-touring",
+      "name": "Origin 600i Touring",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Luxury Touring",
+      "type": "ship",
+      "defaultCallsign": "600i-Touring-01",
+      "operationTags": [
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-85x",
+      "name": "Origin 85x",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Touring",
+      "type": "ship",
+      "defaultCallsign": "85x-01",
+      "operationTags": [
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-890-jump",
+      "name": "Origin 890 Jump",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Luxury Touring",
+      "type": "ship",
+      "defaultCallsign": "890-Jump-01",
+      "operationTags": [
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
             }
           ]
         }
@@ -4108,8 +6752,182 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-m80",
+      "name": "Origin M80",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Heavy Fighter",
+      "type": "ship",
+      "defaultCallsign": "M80-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-apollo-medivac",
+      "name": "RSI Apollo Medivac",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Medical",
+      "type": "ship",
+      "defaultCallsign": "Apollo-Medivac-01",
+      "operationTags": [
+        "medical",
+        "rescue",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "medical",
+          "name": "Medical",
+          "slots": [
+            {
+              "id": "medical-officer",
+              "label": "Medical Officer",
+              "roleType": "medic",
               "isLead": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-apollo-triage",
+      "name": "RSI Apollo Triage",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Medical",
+      "type": "ship",
+      "defaultCallsign": "Apollo-Triage-01",
+      "operationTags": [
+        "medical",
+        "rescue",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "medical",
+          "name": "Medical",
+          "slots": [
+            {
+              "id": "medical-officer",
+              "label": "Medical Officer",
+              "roleType": "medic",
+              "isLead": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-aurora-cl",
+      "name": "RSI Aurora CL",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Light Freight",
+      "type": "ship",
+      "defaultCallsign": "Aurora-CL-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-aurora-es",
+      "name": "RSI Aurora ES",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Pathfinder",
+      "type": "ship",
+      "defaultCallsign": "Aurora-ES-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -4137,8 +6955,344 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-aurora-lx",
+      "name": "RSI Aurora LX",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Pathfinder",
+      "type": "ship",
+      "defaultCallsign": "Aurora-LX-01",
+      "operationTags": [
+        "exploration",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-aurora-mk2",
+      "name": "RSI Aurora Mk II",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Light Freight, Light Fighter, Modular",
+      "type": "ship",
+      "defaultCallsign": "Aurora-Mk-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-aurora-mr",
+      "name": "RSI Aurora MR",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "Aurora-MR-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-aurora-se",
+      "name": "RSI Aurora SE",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Light Freight, Light Fighter",
+      "type": "ship",
+      "defaultCallsign": "Aurora-SE-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "cargo",
+        "hauler",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-constellation-andromeda",
+      "name": "RSI Constellation Andromeda",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Medium Freight, Gunship",
+      "type": "ship",
+      "defaultCallsign": "Constellation-Andromeda-01",
+      "operationTags": [
+        "combat",
+        "gunship",
+        "cargo",
+        "hauler",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "turrets",
+          "name": "Turrets / Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
               "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            },
+            {
+              "id": "gunner-2",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        },
+        {
+          "id": "cargo",
+          "name": "Cargo",
+          "slots": [
+            {
+              "id": "loadmaster",
+              "label": "Loadmaster",
+              "roleType": "loadmaster",
+              "isLead": true
+            },
+            {
+              "id": "cargo-handler",
+              "label": "Cargo Handler",
+              "roleType": "cargoHandler"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-constellation-aquila",
+      "name": "RSI Constellation Aquila",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Expedition",
+      "type": "ship",
+      "defaultCallsign": "Constellation-Aquila-01",
+      "operationTags": [
+        "exploration",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-constellation-phoenix",
+      "name": "RSI Constellation Phoenix",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Luxury Touring",
+      "type": "ship",
+      "defaultCallsign": "Constellation-Phoenix-01",
+      "operationTags": [
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "captain",
+              "label": "Captain",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "pilot"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": [
+            {
+              "id": "chief-engineer",
+              "label": "Chief Engineer",
+              "roleType": "chiefEngineer",
+              "isLead": true
+            },
+            {
+              "id": "engineer",
+              "label": "Engineer",
+              "roleType": "engineer"
             }
           ]
         }
@@ -4151,7 +7305,12 @@
       "category": "Medium Freight",
       "type": "ship",
       "defaultCallsign": "Taurus-01",
-      "operationTags": ["cargo", "hauler", "multi-role", "multi-crew"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "multi-role",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -4160,8 +7319,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -4236,7 +7396,12 @@
       "category": "Medium Freight",
       "type": "ship",
       "defaultCallsign": "Hermes-01",
-      "operationTags": ["cargo", "hauler", "transport", "two-seat"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "transport",
+        "two-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -4245,8 +7410,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -4312,8 +7478,37 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-meteor",
+      "name": "RSI Meteor",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Medium Fighter",
+      "type": "ship",
+      "defaultCallsign": "Meteor-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
@@ -4326,7 +7521,12 @@
       "category": "Gunship",
       "type": "ship",
       "defaultCallsign": "Perseus-01",
-      "operationTags": ["gunship", "combat", "anti-large", "multi-crew"],
+      "operationTags": [
+        "gunship",
+        "combat",
+        "anti-large",
+        "multi-crew"
+      ],
       "groups": [
         {
           "id": "command",
@@ -4335,8 +7535,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "pilot",
@@ -4435,8 +7636,9 @@
             {
               "id": "captain",
               "label": "Captain",
-              "roleType": "captain",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "executive-officer",
@@ -4553,7 +7755,11 @@
       "category": "Light Salvage",
       "type": "ship",
       "defaultCallsign": "Salvation-01",
-      "operationTags": ["salvage", "industrial", "single-seat"],
+      "operationTags": [
+        "salvage",
+        "industrial",
+        "single-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -4562,8 +7768,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         },
@@ -4600,7 +7807,13 @@
       "category": "Heavy Fighter",
       "type": "ship",
       "defaultCallsign": "Scorpius-01",
-      "operationTags": ["fighter", "heavy", "combat", "two-seat", "escort"],
+      "operationTags": [
+        "fighter",
+        "heavy",
+        "combat",
+        "two-seat",
+        "escort"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -4609,8 +7822,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "turret-gunner",
@@ -4644,8 +7858,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "ew-operator",
@@ -4663,7 +7878,12 @@
       "category": "Cargo",
       "type": "ship",
       "defaultCallsign": "Zeus-CL-01",
-      "operationTags": ["cargo", "hauler", "support", "two-seat"],
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "support",
+        "two-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -4672,8 +7892,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -4691,7 +7912,11 @@
       "category": "Exploration",
       "type": "ship",
       "defaultCallsign": "Zeus-ES-01",
-      "operationTags": ["exploration", "support", "two-seat"],
+      "operationTags": [
+        "exploration",
+        "support",
+        "two-seat"
+      ],
       "groups": [
         {
           "id": "cockpit",
@@ -4700,8 +7925,9 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
-              "isLead": true
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -4713,19 +7939,19 @@
       ]
     },
     {
-      "id": "rsi-zeus-mk2-mr",
-      "name": "RSI Zeus Mk II MR",
-      "manufacturer": "Roberts Space Industries",
-      "category": "Combat Utility",
+      "id": "aopoa-khartu-al",
+      "name": "Aopoa Khartu-al",
+      "manufacturer": "Aopoa",
+      "category": "Light Fighter",
       "type": "ship",
-      "defaultCallsign": "Zeus-MR-01",
+      "defaultCallsign": "Khartu-al-01",
       "operationTags": [
-        "combat-utility",
-        "medical",
-        "rescue",
-        "support",
-        "multi-crew",
-        "escort"
+        "fighter",
+        "light",
+        "scout",
+        "alien",
+        "single-seat",
+        "squadron"
       ],
       "groups": [
         {
@@ -4735,8 +7961,1044 @@
             {
               "id": "pilot",
               "label": "Pilot",
-              "roleType": "pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aopoa-santokyai",
+      "name": "Aopoa San'tok.yai",
+      "manufacturer": "Aopoa",
+      "category": "Medium Fighter",
+      "type": "ship",
+      "defaultCallsign": "San-tok-01",
+      "operationTags": [
+        "fighter",
+        "combat",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-ballista",
+      "name": "Anvil Ballista",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Anti-Aircraft",
+      "type": "vehicle",
+      "defaultCallsign": "Ballista-01",
+      "operationTags": [
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "weapons",
+          "name": "Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
               "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-centurion",
+      "name": "Anvil Centurion",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Anti-Aircraft",
+      "type": "vehicle",
+      "defaultCallsign": "Centurion-01",
+      "operationTags": [
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "weapons",
+          "name": "Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil-spartan",
+      "name": "Anvil Spartan",
+      "manufacturer": "Anvil Aerospace",
+      "category": "Light APC",
+      "type": "ship",
+      "defaultCallsign": "Spartan-01",
+      "operationTags": [
+        "transport",
+        "ground-support",
+        "apc",
+        "boarding",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        },
+        {
+          "id": "troops",
+          "name": "Troop Bay",
+          "slots": [
+            {
+              "id": "squad-lead",
+              "label": "Squad Lead",
+              "roleType": "squadLead",
+              "isLead": true
+            },
+            {
+              "id": "trooper-1",
+              "label": "Trooper",
+              "roleType": "trooper"
+            },
+            {
+              "id": "trooper-2",
+              "label": "Trooper",
+              "roleType": "trooper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "argo-atls",
+      "name": "ARGO ATLS",
+      "manufacturer": "ARGO Astronautics",
+      "category": "Utility",
+      "type": "vehicle",
+      "defaultCallsign": "ATLS-01",
+      "operationTags": [
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "operator",
+              "label": "Operator",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "argo-atls-geo",
+      "name": "ARGO ATLS Geo",
+      "manufacturer": "ARGO Astronautics",
+      "category": "Mining",
+      "type": "vehicle",
+      "defaultCallsign": "ATLS-Geo-01",
+      "operationTags": [
+        "mining",
+        "industrial",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "operator",
+              "label": "Operator",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        },
+        {
+          "id": "industrial-ops",
+          "name": "Industrial Ops",
+          "slots": [
+            {
+              "id": "industrial-lead",
+              "label": "Mining Lead",
+              "roleType": "miningLead",
+              "isLead": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "argo-csv-sm",
+      "name": "ARGO CSV-SM",
+      "manufacturer": "ARGO Astronautics",
+      "category": "Light Freight",
+      "type": "vehicle",
+      "defaultCallsign": "CSV-SM-01",
+      "operationTags": [
+        "cargo",
+        "hauler",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cnou-hoverquad",
+      "name": "Consolidated Outland HoverQuad",
+      "manufacturer": "Consolidated Outland",
+      "category": "Passenger",
+      "type": "vehicle",
+      "defaultCallsign": "HoverQuad-01",
+      "operationTags": [
+        "transport",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drake-dragonfly-black",
+      "name": "Drake Dragonfly Black",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Racing",
+      "type": "vehicle",
+      "defaultCallsign": "Dragonfly-Black-01",
+      "operationTags": [
+        "racer",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drake-mule",
+      "name": "Drake Mule",
+      "manufacturer": "Drake Interplanetary",
+      "category": "Snub Utility",
+      "type": "ship",
+      "defaultCallsign": "Mule-01",
+      "operationTags": [
+        "snub",
+        "cargo",
+        "utility",
+        "parasite",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greycat-mdc",
+      "name": "Greycat MDC",
+      "manufacturer": "Greycat Industrial",
+      "category": "Anti-Aircraft",
+      "type": "vehicle",
+      "defaultCallsign": "MDC-01",
+      "operationTags": [
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greycat-mtc",
+      "name": "Greycat MTC",
+      "manufacturer": "Greycat Industrial",
+      "category": "Passenger",
+      "type": "vehicle",
+      "defaultCallsign": "MTC-01",
+      "operationTags": [
+        "transport",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "passengers",
+          "name": "Passenger / Team",
+          "slots": [
+            {
+              "id": "team-lead",
+              "label": "Team Lead",
+              "roleType": "squadLead",
+              "isLead": true
+            },
+            {
+              "id": "crew-1",
+              "label": "Crew",
+              "roleType": "trooper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greycat-ptv",
+      "name": "Greycat PTV",
+      "manufacturer": "Greycat Industrial",
+      "category": "Passenger",
+      "type": "vehicle",
+      "defaultCallsign": "PTV-01",
+      "operationTags": [
+        "transport",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greycat-roc",
+      "name": "Greycat ROC",
+      "manufacturer": "Greycat Industrial",
+      "category": "Light Mining",
+      "type": "vehicle",
+      "defaultCallsign": "ROC-01",
+      "operationTags": [
+        "mining",
+        "industrial",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        },
+        {
+          "id": "industrial-ops",
+          "name": "Industrial Ops",
+          "slots": [
+            {
+              "id": "industrial-lead",
+              "label": "Mining Lead",
+              "roleType": "miningLead",
+              "isLead": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greycat-roc-ds",
+      "name": "Greycat ROC DS",
+      "manufacturer": "Greycat Industrial",
+      "category": "Light Mining",
+      "type": "vehicle",
+      "defaultCallsign": "ROC-DS-01",
+      "operationTags": [
+        "mining",
+        "industrial",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "industrial-ops",
+          "name": "Industrial Ops",
+          "slots": [
+            {
+              "id": "industrial-lead",
+              "label": "Mining Lead",
+              "roleType": "miningLead",
+              "isLead": true
+            },
+            {
+              "id": "industrial-operator",
+              "label": "Mining Operator",
+              "roleType": "miningOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greycat-stv",
+      "name": "Greycat STV",
+      "manufacturer": "Greycat Industrial",
+      "category": "Racing",
+      "type": "vehicle",
+      "defaultCallsign": "STV-01",
+      "operationTags": [
+        "racer",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greycat-utv",
+      "name": "Greycat UTV",
+      "manufacturer": "Greycat Industrial",
+      "category": "Recon",
+      "type": "vehicle",
+      "defaultCallsign": "UTV-01",
+      "operationTags": [
+        "exploration",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-pulse",
+      "name": "Mirai Pulse",
+      "manufacturer": "Mirai",
+      "category": "Recon",
+      "type": "vehicle",
+      "defaultCallsign": "Pulse-01",
+      "operationTags": [
+        "exploration",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mirai-pulse-lx",
+      "name": "Mirai Pulse LX",
+      "manufacturer": "Mirai",
+      "category": "Racing",
+      "type": "vehicle",
+      "defaultCallsign": "Pulse-LX-01",
+      "operationTags": [
+        "racer",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-x1-base",
+      "name": "Origin X1 Base",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Passenger",
+      "type": "vehicle",
+      "defaultCallsign": "X1-Base-01",
+      "operationTags": [
+        "transport",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-x1-force",
+      "name": "Origin X1 Force",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Passenger",
+      "type": "vehicle",
+      "defaultCallsign": "X1-Force-01",
+      "operationTags": [
+        "transport",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origin-x1-velocity",
+      "name": "Origin X1 Velocity",
+      "manufacturer": "Origin Jumpworks",
+      "category": "Racing",
+      "type": "vehicle",
+      "defaultCallsign": "X1-Velocity-01",
+      "operationTags": [
+        "racer",
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-lynx-rover",
+      "name": "RSI Lynx Rover",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Luxury Touring",
+      "type": "vehicle",
+      "defaultCallsign": "Lynx-Rover-01",
+      "operationTags": [
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-ursa-rover",
+      "name": "RSI URSA Rover",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Recon",
+      "type": "vehicle",
+      "defaultCallsign": "URSA-Rover-01",
+      "operationTags": [
+        "exploration",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsi-ursa-rover-medivac",
+      "name": "RSI URSA Rover Medivac",
+      "manufacturer": "Roberts Space Industries",
+      "category": "Medical",
+      "type": "vehicle",
+      "defaultCallsign": "URSA-Rover-01",
+      "operationTags": [
+        "medical",
+        "rescue",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "medical",
+          "name": "Medical",
+          "slots": [
+            {
+              "id": "medical-officer",
+              "label": "Medical Officer",
+              "roleType": "medic",
+              "isLead": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-cyclone",
+      "name": "Tumbril Cyclone",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Passenger",
+      "type": "vehicle",
+      "defaultCallsign": "Cyclone-01",
+      "operationTags": [
+        "transport",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "passengers",
+          "name": "Passenger / Team",
+          "slots": [
+            {
+              "id": "team-lead",
+              "label": "Team Lead",
+              "roleType": "squadLead",
+              "isLead": true
+            },
+            {
+              "id": "crew-1",
+              "label": "Crew",
+              "roleType": "trooper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-cyclone-aa",
+      "name": "Tumbril Cyclone AA",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Anti-Aircraft",
+      "type": "vehicle",
+      "defaultCallsign": "Cyclone-AA-01",
+      "operationTags": [
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "weapons",
+          "name": "Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-cyclone-mt",
+      "name": "Tumbril Cyclone MT",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Anti-Aircraft",
+      "type": "vehicle",
+      "defaultCallsign": "Cyclone-MT-01",
+      "operationTags": [
+        "ground-support",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             },
             {
               "id": "co-pilot",
@@ -4746,14 +9008,284 @@
           ]
         },
         {
-          "id": "medbay",
-          "name": "Medical Bay",
+          "id": "weapons",
+          "name": "Weapons",
           "slots": [
             {
-              "id": "medical-officer",
-              "label": "Medical Officer",
-              "roleType": "medic",
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
               "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-cyclone-rc",
+      "name": "Tumbril Cyclone RC",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Racing",
+      "type": "vehicle",
+      "defaultCallsign": "Cyclone-RC-01",
+      "operationTags": [
+        "racer",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-cyclone-rn",
+      "name": "Tumbril Cyclone RN",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Recon",
+      "type": "vehicle",
+      "defaultCallsign": "Cyclone-RN-01",
+      "operationTags": [
+        "exploration",
+        "ground-support",
+        "two-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Driver",
+          "slots": [
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "driver",
+              "label": "Driver",
+              "roleType": "driver"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "slots": [
+            {
+              "id": "navigator",
+              "label": "Navigator",
+              "roleType": "navigator",
+              "isLead": true
+            },
+            {
+              "id": "scanner-operator",
+              "label": "Scanner Operator",
+              "roleType": "scannerOperator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-cyclone-tr",
+      "name": "Tumbril Cyclone TR",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Anti-Vehicle",
+      "type": "vehicle",
+      "defaultCallsign": "Cyclone-TR-01",
+      "operationTags": [
+        "ground-support",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "weapons",
+          "name": "Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-nova",
+      "name": "Tumbril Nova",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Heavy Tank",
+      "type": "vehicle",
+      "defaultCallsign": "Nova-01",
+      "operationTags": [
+        "ground-support",
+        "multi-crew"
+      ],
+      "groups": [
+        {
+          "id": "command",
+          "name": "Command",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            },
+            {
+              "id": "co-pilot",
+              "label": "Co-Pilot",
+              "roleType": "coPilot"
+            }
+          ]
+        },
+        {
+          "id": "weapons",
+          "name": "Weapons",
+          "slots": [
+            {
+              "id": "weapons-lead",
+              "label": "Weapons Lead",
+              "roleType": "turretCommander",
+              "isLead": true
+            },
+            {
+              "id": "gunner",
+              "label": "Gunner",
+              "roleType": "gunner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-storm",
+      "name": "Tumbril Storm",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Light Tank",
+      "type": "vehicle",
+      "defaultCallsign": "Storm-01",
+      "operationTags": [
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumbril-storm-aa",
+      "name": "Tumbril Storm AA",
+      "manufacturer": "Tumbril Land Systems",
+      "category": "Light Tank",
+      "type": "vehicle",
+      "defaultCallsign": "Storm-AA-01",
+      "operationTags": [
+        "ground-support",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "vehicle-control",
+          "name": "Operator",
+          "slots": [
+            {
+              "id": "commander",
+              "label": "Commander",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aopoa-nox",
+      "name": "Aopoa Nox",
+      "manufacturer": "Aopoa",
+      "category": "Snub Bike",
+      "type": "ship",
+      "defaultCallsign": "Nox-01",
+      "operationTags": [
+        "snub",
+        "bike",
+        "alien",
+        "parasite",
+        "single-seat"
+      ],
+      "groups": [
+        {
+          "id": "bike",
+          "name": "Bike",
+          "slots": [
+            {
+              "id": "pilot",
+              "label": "Pilot",
+              "roleType": "unitCommand",
+              "isLead": true,
+              "commsCategory": "unitCommand"
             }
           ]
         }
